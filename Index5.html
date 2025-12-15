@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AIZZATROZI · Student Bento Page</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #f7f9fb;
+      --card-bg: #ffffff;
+      --border: #e5e9ef;
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+      --accent: #0a3d62; /* Ocean Blue */
+      --radius: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      padding: 24px;
+      margin: 0 auto;
+    }
+
+    .bento-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-auto-rows: minmax(120px, auto);
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card h2 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    /* Card sizing */
+    .profile {
+      grid-column: span 6;
+      grid-row: span 2;
+    }
+
+    .location {
+      grid-column: span 3;
+    }
+
+    .hobby {
+      grid-column: span 3;
+    }
+
+    .tech {
+      grid-column: span 4;
+    }
+
+    .case-study {
+      grid-column: span 4;
+    }
+
+    .playlist {
+      grid-column: span 12;
+    }
+
+    /* Profile */
+    .profile .name {
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .profile .program {
+      color: var(--accent);
+      font-weight: 500;
+      margin: 4px 0;
+    }
+
+    .profile .tagline {
+      margin-top: 10px;
+      font-style: italic;
+      color: var(--text-muted);
+    }
+
+    .social-links {
+      display: flex;
+      gap: 12px;
+      margin-top: 16px;
+      flex-wrap: wrap;
+    }
+
+    .social-links a {
+      font-size: 0.85rem;
+      text-decoration: none;
+      color: var(--accent);
+      border: 1px solid var(--border);
+      padding: 6px 14px;
+      border-radius: 999px;
+      transition: all 0.2s ease;
+    }
+
+    .social-links a:hover {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+
+    /* Playlist placeholder */
+    .playlist-box {
+      height: 80px;
+      border: 1px dashed var(--border);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .bento-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .profile,
+      .location,
+      .hobby,
+      .tech,
+      .case-study,
+      .playlist {
+        grid-column: span 1;
+        grid-row: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="bento-grid">
+
+      <!-- Card 1: Profile -->
+      <div class="card profile">
+        <div>
+          <div class="name">AIZZATROZI</div>
+          <div class="program">Science Agrotechnology · Year 1</div>
+          <p class="tagline">“Feeding the Future With Smart Innovation.”</p>
+        </div>
+        <div class="social-links">
+          <a href="#">LinkedIn</a>
+          <a href="#">GitHub</a>
+          <a href="#">UMT Portal</a>
+        </div>
+      </div>
+
+      <!-- Card 2: Location -->
+      <div class="card location">
+        <h2>Location</h2>
+        <p>Universiti Malaysia Terengganu</p>
+        <p>Kuala Nerus</p>
+      </div>
+
+      <!-- Card 5: Hobby -->
+      <div class="card hobby">
+        <h2>Hobby</h2>
+        <p>Evening walks at Pantai UMT</p>
+      </div>
+
+      <!-- Card 3: Tech Stack -->
+      <div class="card tech">
+        <h2>Academic Focus</h2>
+        <p>Soil Science</p>
+        <p>Microbiology</p>
+        <p>Excel</p>
+        <p>Lab Analysis</p>
+      </div>
+
+      <!-- Card 4: Case Study -->
+      <div class="card case-study">
+        <h2>Case Study · Local Plant</h2>
+        <p>
+          Analyzing texture profiles of soil to understand structural behavior
+          and suitability for agricultural applications.
+        </p>
+      </div>
+
+      <!-- Card 6: Playlist -->
+      <div class="card playlist">
+        <h2>Playlist</h2>
+        <div class="playlist-box">
+          Music player placeholder
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
