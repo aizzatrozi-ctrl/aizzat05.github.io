@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>AIZZATROZI · Student Bento Page</title>
 
-  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
@@ -86,6 +85,10 @@
 
     .case-study {
       grid-column: span 4;
+      /* Adjust flex-direction for the new button */
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
     .playlist {
@@ -134,6 +137,35 @@
       border-color: var(--accent);
     }
 
+    /* New Button Style for Case Study */
+    .case-study-content {
+      /* To group existing content */
+      margin-bottom: 20px; /* Space between text and button */
+      flex-grow: 1;
+    }
+
+    .focus-timer-btn {
+      display: inline-block;
+      text-decoration: none;
+      background: var(--accent);
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-align: center;
+      transition: background-color 0.2s ease, transform 0.1s ease;
+      /* Ensure it stays at the bottom */
+      align-self: flex-start;
+      margin-top: auto; /* Push to the bottom */
+    }
+
+    .focus-timer-btn:hover {
+      background: #002e4d; /* Slightly darker shade of accent */
+      transform: translateY(-1px); /* Subtle lift effect */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
     /* Playlist placeholder */
     .playlist-box {
       height: 80px;
@@ -169,7 +201,6 @@
   <div class="container">
     <div class="bento-grid">
 
-      <!-- Card 1: Profile -->
       <div class="card profile">
         <div>
           <div class="name">AIZZATROZI</div>
@@ -183,20 +214,17 @@
         </div>
       </div>
 
-      <!-- Card 2: Location -->
       <div class="card location">
         <h2>Location</h2>
         <p>Universiti Malaysia Terengganu</p>
         <p>Kuala Nerus</p>
       </div>
 
-      <!-- Card 5: Hobby -->
       <div class="card hobby">
         <h2>Hobby</h2>
         <p>Evening walks at Pantai UMT</p>
       </div>
 
-      <!-- Card 3: Tech Stack -->
       <div class="card tech">
         <h2>Academic Focus</h2>
         <p>Soil Science</p>
@@ -205,16 +233,19 @@
         <p>Lab Analysis</p>
       </div>
 
-      <!-- Card 4: Case Study -->
       <div class="card case-study">
-        <h2>Case Study · Local Plant</h2>
-        <p>
-          Analyzing texture profiles of soil to understand structural behavior
-          and suitability for agricultural applications.
-        </p>
+        <div class="case-study-content">
+          <h2>Case Study · Local Plant</h2>
+          <p>
+            Analyzing texture profiles of soil to understand structural behavior
+            and suitability for agricultural applications.
+          </p>
+        </div>
+        <a href="https://aizzatrozi-ctrl.github.io/focus-timer-app/app.html" target="_blank" class="focus-timer-btn">
+          Try My Focus Timer App
+        </a>
       </div>
 
-      <!-- Card 6: Playlist -->
       <div class="card playlist">
         <h2>Playlist</h2>
         <div class="playlist-box">
